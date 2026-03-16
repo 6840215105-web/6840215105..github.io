@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Intelligent pets</title>
+
+<style>
+/* เปลี่ยนสีพื้นหลังและสีตัวอักษร */
+body {
+    background-color:#CCCCFF;
+    color:#6600FF;
+    font-family: Arial, sans-serif;
+}
+
+/* ปรับขนาดและสีของหัวข้อหลัก */
+h1 {
+    font-size:40px;
+    color:#9999FF;
+    text-align:center;
+}
+
+/* ปรับขนาดหัวข้อรอง */
+h2 {
+    font-size:26px;
+    color:#6666FF;
+}
+
+/* จัดรูปภาพให้อยู่กลาง */
+img {
+    display:block;
+    margin:auto;
+    width:200px;
+}
+
+/* ตกแต่งรายการ */
+ul {
+    background-color:#33FFFF;
+    padding:15px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+  <div class="box">
+    <h3>Play: กดปุ่ม</h3>
+    <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+</div>
+
+<div class="box">
+    <h3>ป้อนชื่อของคุณ</h3>
+    <input type="text" id="userName" placeholder="กรอกชื่อที่นี่...">
+    <br>
+    <button onclick="greetUser()">ทักทาย</button>
+    <p id="displayArea"></p>
+</div>
+
+<script>
+function showWelcome() {
+    alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน!");
+}
+
+function greetUser() {
+    const name = document.getElementById("userName").value;
+    const display = document.getElementById("displayArea");
+
+    if (name.trim() !== "") {
+        display.innerText = `สวัสดีคุณ ${name} ยินดีต้อนรับครับ/ค่ะ!`;
+        display.style.color = "#2ecc71";
+    } else {
+        display.innerText = "กรุณากรอกชื่อก่อนกดปุ่มนะครับ";
+        display.style.color = "#e74c3c";
+    }
+}
+</script>
+
+<h1>Intelligent pets</h1>
+
+<p>
+ประวัติสัตว์เลี้ยงมีความเป็นมายาวนานกว่า 15,000-30,000 ปี โดยสุนัขเป็นสัตว์ชนิดแรกที่มนุษย์นำมาเลี้ยงจากสุนัขป่าเพื่อช่วยล่าสัตว์และเฝ้าที่อยู่อาศัย ตามมาด้วยแมวที่มีประวัติการเลี้ยงมากว่า 9,500 ปีเพื่อจัดการศัตรูพืช การเลี้ยงสัตว์พัฒนาจากการเน้นประโยชน์ใช้งาน สู่การเลี้ยงเพื่อเป็นเพื่อนคลายเหงาและสมาชิกครอบครัวในปัจจุบัน
+</p>
+
+<img src="https://uploads.onecompiler.io/44gfytdy5/44gfxyvxr/1112.jpg" alt="Pet">
+
+<h2>ค้นหาข้อมูลได้ที่</h2>
+<ul>
+<li>YouTube – ใช้ดูวิดีโอและเรียนรู้ออนไลน์</li>
+<li>Google – ใช้ค้นหาข้อมูล</li>
+<li>Instagram – ใช้ติดตามข่าวสารและรูปภาพ</li>
+</ul>
+
+<p>
+เข้าใช้งานเว็บไซต์ได้ที่ :
+<a href="https://www.petnme.co.th/how-to-care-for-your-hamster/" target="_blank">
+Visit YouTube
+</a>
+</p>
+
+</body>
+</html>
